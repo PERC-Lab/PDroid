@@ -130,3 +130,5 @@ dmypy.json
 
 *.apk
 .vscode/
+
+PDrolyze Test.ipynb
