@@ -1,2 +1,3 @@
 *.apk
 .vscode/
+.ipynb_checkpoints/
