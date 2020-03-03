@@ -16,7 +16,7 @@ class APK():
         self._dx = apk_analysis # dx
         self._name = self._get_package_name()
         self._permission_in_xml = self._get_permissions()
-        self._api_methods = self._get_api_methods()
+        self._api_methods = self._extract_api_methods()
         self._picu = self._get_picu()
     
     def _get_permissions(self):
@@ -28,7 +28,8 @@ class APK():
     def _get_app_name(self):
         return self._a.get_app_name()
     
-    def _get_api_methods(self):
+    def _extract_api_methods(self):
+        """Extract all the API methods declared in the app"""
 
         api_methods = []
         all_methods = dict([(x.method.name, "") for x in self._dx.methods.values() ]) # TODO Optimize this
