@@ -26,6 +26,7 @@ def get_api_methods():
     return [x.split(';')[-1] for x in method_to_pi.keys()]
 
 def map_api_to_pi(method_name):
+    """Maps API method to the personal information being collected"""
     method_to_pi = json.load(open(path.join(CWD, "pdrolyze", "method_to_pi.json"), 'r'))
     return method_to_pi[method_name]
 
