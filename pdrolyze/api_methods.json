@@ -1,4 +1,4 @@
-{"android.location.LocationManager;addGPsStatusListener": "Location",
+[{"android.location.LocationManager;addGPsStatusListener": "Location",
 "android.location.LocationManager;addNmeaListener": "Location",
 "android.location.LocationManager;addProximityAlert": "Location",
 "android.location.LocationManager;addTestProvider": "Location",
@@ -30,4 +30,34 @@
 "android.location.LocationManager;unregisterGnssMeasurementsCallback": "Location",
 "android.location.LocationManager;unregisterGnssStatusCallback": "Location",
 "android.location.LocationManager;getBestProvider": "Location",
-"android.location.LocationManager;isLocationEnabled": "Location"}
+"android.location.LocationManager;isLocationEnabled": "Location"},
+
+{
+ "android.net.ConnectivityManager;getActiveNetwork": "Network",
+ "android.net.ConnectivityManager;getActiveNetworkInfo": "Network",
+ "android.net.ConnectivityManager;getAllNetworkInfo": "Network",
+ "android.net.ConnectivityManager;getAllNetworks": "Network",
+ "android.net.ConnectivityManager;getLinkProperties": "Network",
+ "android.net.ConnectivityManager;getMultipathPreference": "Network",
+ "android.net.ConnectivityManager;getNetworkCapabilities": "Network",
+ "android.net.ConnectivityManager;getNetworkInfo": "Network",
+ "android.net.ConnectivityManager;getNetworkPreference": "Network",
+ "android.net.ConnectivityManager;isActiveNetworkMetered": "Network",
+ "android.net.ConnectivityManager;registerDefaultNetworkCallback": "Network",
+ "android.net.ConnectivityManager;registerNetworkCallback": "Network",
+ "android.net.ConnectivityManager;requestNetwrok":"Network"
+},
+
+ {"android.net.wifi.WifiManager.addNetworkSuggestions": "Wifi",
+  "android.net.wifi.WifiManager;getConnectionInfo": "Location",
+  "android.net.wifi.WifiManager;getPasspointConfigurations":"Network",
+  "android.net.wifi.WifiManager;getScanResults": "Location",
+  "android.net.wifi.WifiManager;removeNetworkSuggestions": "Wifi",
+  "android.net.wifi.WifiManager;setWifiEnabled": "Wifi",
+  "android.net.wifi.WifiManager;startScan": "Wifi",
+  "android.net.wifi.WifiManager;removePasspointConfiguration":"Network",
+  "android.net.wifi.WifiManager;getConfiguredNetworks": ["Location", "Wifi"],
+  "android.net.wifi.WifiManager;startLocalOnlyHotspot": ["Location", "Wifi"]
+ }
+
+]

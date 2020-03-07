@@ -20,10 +20,14 @@ def get_reg_class_name():
     return
 
 def get_api_methods():
-    method_list = []
+    api_list = []
 
-    method_to_pi = json.load(open(path.join(CWD, "pdrolyze", "api_methods.json"), 'r'))
-    return [x.split(';')[-1] for x in method_to_pi.keys()]
+    list_of_mappings = json.load(open(path.join(CWD, "pdrolyze", "api_methods.json"), 'r'))
+    for each_class_to_pi_mapping in list_of_mappings:
+        for each_api_to_pi_mapping in each_class_to_pi_mapping.keys():
+            api_list.append(each_api_to_pi_mapping.split(';')[-1])
+    
+    return api_list
 
 def map_api_to_pi(method_name):
     """Maps API method to the personal information being collected"""
