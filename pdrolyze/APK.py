@@ -18,8 +18,8 @@ class APK():
         self._permissions_in_xml = apk.get_permissions()
         self._api_methods = self._extract_api_methods()
         self._picu = self._get_picu()
-        self._api_callers = self._extract_api_callers()
-        self._api_caller_callers = self._extract_api_caller_callers()
+        self._api_callers = self._extract_callers(self._api_methods)
+        self._api_caller_callers = self._extract_callers(self._api_callers)
     
     def get_permissions_in_xml(self):
         return self._permissions_in_xml
@@ -43,31 +43,18 @@ class APK():
                 pass
         
         return api_methods
-    
-    def _extract_api_callers(self):
-        """Extract methods that call the API methos in the apk"""
-        api_callers = {}
+       
+    def _extract_callers(self, list_of_methods):
+        """Returns a list of methods that call methods in `list_of_methods`"""
+        callers = {}
 
-        for privacy_meth in self._api_methods:
-            for _, call, _ in privacy_meth._method_analysis_object.get_xref_from():
-                caller = PrivacyCode(call)
-                if caller not in api_callers:
-                    api_callers[caller] = ""
-
-        return [x for x in api_callers.keys()]
-    
-    def _extract_api_caller_callers(self):
-        """Extract methods that call API Callers"""
-        api_caller_callers = {}
-
-        for each_meth in self._api_callers:
+        for each_meth in list_of_methods:
             for _, call, _ in each_meth._method_analysis_object.get_xref_from():
                 caller = PrivacyCode(call)
-                if caller not in api_caller_callers:
-                    api_caller_callers[caller] = ""
-                
-                
-        return [x for x in api_caller_callers.keys()]
+                if caller not in callers:
+                    callers[caller] = ""
+        
+        return [x for x in callers.keys()]
     
     def _get_picu(self):
         """Return list of personal information collected/used (picu) by application"""
