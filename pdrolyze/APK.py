@@ -79,7 +79,12 @@ class APK():
             if not each_api_caller.is_method_analysis_object_external():
                 api_callers.append(each_api_caller.export())
         attribute_dictionary["api_callers"] = api_callers
-        print(len(api_callers))
+
+        api_caller_callers = []
+        for each_api_double_caller in self._api_caller_callers:
+            if not each_api_double_caller.is_method_analysis_object_external():
+                api_caller_callers.append(each_api_double_caller.export())
+        attribute_dictionary["api_double_callers"] = api_caller_callers
 
         return attribute_dictionary
 
@@ -131,8 +136,11 @@ class PrivacyCode:
                         ])
         
         if include_src_code:
-            json_obj["source_code"] = str(self.get_source_code())
-        
+            try:
+                json_obj["source_code"] = str(self.get_source_code())
+            except Exception:
+                json_obj["source_code"] = "N/A"
+
         return json_obj
 
     def __str__(self):
