@@ -18,7 +18,8 @@ class APK():
         self._permissions_in_xml = apk.get_permissions()
         self._api_methods = self._extract_api_methods()
         self._picu = self._get_picu()
-        self._api_callers = self._extract_api_callers()
+        self._api_callers = self._extract_callers(self._api_methods)
+        self._api_caller_callers = self._extract_callers(self._api_callers)
     
     def get_permissions_in_xml(self):
         return self._permissions_in_xml
@@ -42,17 +43,18 @@ class APK():
                 pass
         
         return api_methods
-    
-    def _extract_api_callers(self):
-        """Extract methods that call the API methos in the apk"""
-        api_callers = []
+       
+    def _extract_callers(self, list_of_methods):
+        """Returns a list of methods that call methods in `list_of_methods`"""
+        callers = {}
 
-        for privacy_meth in self._api_methods:
-            for _, call, _ in privacy_meth._method_analysis_object.get_xref_from():
+        for each_meth in list_of_methods:
+            for _, call, _ in each_meth._method_analysis_object.get_xref_from():
                 caller = PrivacyCode(call)
-                api_callers.append(caller)       
-
-        return api_callers
+                if caller not in callers:
+                    callers[caller] = ""
+        
+        return [x for x in callers.keys()]
     
     def _get_picu(self):
         """Return list of personal information collected/used (picu) by application"""

@@ -131,4 +131,6 @@ dmypy.json
 *.apk
 .vscode/
 
-PDrolyze Test.ipynb
+*.ipynb
+logfile.txt
+pdrolyze/*.txt
