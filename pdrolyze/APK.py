@@ -6,7 +6,7 @@
 
 from androguard.misc import AnalyzeAPK
 
-from pdrolyze.utils import *
+from pdrolyze.utils import *, get_api_methods, map_api_to_pi
 
 class APK():
 
