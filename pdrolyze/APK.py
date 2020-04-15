@@ -6,7 +6,7 @@
 
 from androguard.misc import AnalyzeAPK
 
-from pdrolyze.utils import *, get_api_methods, map_api_to_pi
+from pdrolyze.utils import get_api_methods, map_api_to_pi, print_src_code
 
 class APK():
 
@@ -104,7 +104,6 @@ class PrivacyCode:
         self._method_name = self._method_analysis_object.method.name
         self._class_name = self._method_analysis_object.class_name.replace("L", "").replace(";", "")
 
-
     def get_ag_method_name(self):
         return
     
@@ -116,6 +115,27 @@ class PrivacyCode:
     
     def is_method_analysis_object_external(self):
         return self._method_analysis_object.is_external()
+    
+    def get_caller_methods(self):
+        """Returns a list of methods that call this method"""
+        callers = []
+        
+        for _, call, _ in self._method_analysis_object.get_xref_from():
+            caller = PrivacyCode(call)
+            if caller not in callers:
+                callers.append(caller)
+
+        return callers
+    
+    def get_caller_method_src_codes(self, caller_method):
+        """Returns the caller_method's source_code"""
+
+        if not caller_method.is_method_analysis_object_external():
+            src_code = caller_method.get_source_code()
+        else:
+            src_code = "N/A"
+        
+        return src_code
 
     def get_source_code(self):
         """Returns the source code of the method. It is 

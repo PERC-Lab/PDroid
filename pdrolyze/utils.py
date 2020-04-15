@@ -34,5 +34,9 @@ def map_api_to_pi(method_name):
     method_to_pi = json.load(open(path.join(CWD, "pdrolyze", "method_to_pi.json"), 'r'))
     return method_to_pi[method_name]
 
+def print_src_code(src_code):
+    src_code_split = src_code.split('\n')
 
+    for each_part in src_code_split:
+        print(each_part)
 
