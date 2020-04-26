@@ -43,7 +43,7 @@
 "isActiveNetworkMetered": "Network",
 "registerDefaultNetworkCallback": "Network",
 "registerNetworkCallback": "Network",
-"requestNetwrok":"Network",
+"requestNetwork":"Network",
 "addNetworkSuggestions": "Wifi",
 "getConnectionInfo": "Location",
 "getPasspointConfigurations":"Network",

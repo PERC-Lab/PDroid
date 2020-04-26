@@ -45,7 +45,7 @@
  "android.net.ConnectivityManager;isActiveNetworkMetered": "Network",
  "android.net.ConnectivityManager;registerDefaultNetworkCallback": "Network",
  "android.net.ConnectivityManager;registerNetworkCallback": "Network",
- "android.net.ConnectivityManager;requestNetwrok":"Network"
+ "android.net.ConnectivityManager;requestNetwork":"Network"
 },
 
  {"android.net.wifi.WifiManager.addNetworkSuggestions": "Wifi",
