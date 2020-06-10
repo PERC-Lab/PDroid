@@ -1,7 +1,6 @@
 """Module for handling privacy-related data in APK and Android"""
 
 # TODO - 
-# 2. Create an object that maps the metadata about APIs, Classes, and their associated Information
 # 3. Try not to import Androguard objects inside the APK attributes
 
 from androguard.misc import AnalyzeAPK

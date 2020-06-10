@@ -1,25 +1,15 @@
 """Module to analyze the  apk file"""
 
+import json
 import os
 from os import path
 
-from androguard.misc import AnalyzeAPK
-from androguard.cli.main import plot
-
 import networkx as nx
-
-import json
+from androguard.cli.main import plot
+from androguard.misc import AnalyzeAPK
 
 CWD = os.getcwd()
 
-"""
-1. Get Permission
-2. From permission get the class
-3. Convert class to Androguard class name
-4. Get the list of methods that are being called
-5. 
-
-"""
 
 def get_api_classes(list_of_permissions):
     """Returns class that require the given permission
@@ -113,5 +103,4 @@ PATH = path.join(CWD, "../TEST/")
 print("Here")
 file = "/home/vijayantajain/VJ/code/research/Phase 1/PDroLyze/ae.gov.dha.dha.dha-12.apk"   
 analyze(file, PATH)
-
 
