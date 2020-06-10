@@ -1,0 +1,1209 @@
+{
+    "android.location.LocationManager;addGpsStatusListener": {
+        "id": "android.location.LocationManager;addGpsStatusListener",
+        "class_name": "android.location.LocationManager",
+        "method_name": "addGpsStatusListener",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Adds a GPS status listener.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;addNmeaListener": {
+        "id": "android.location.LocationManager;addNmeaListener",
+        "class_name": "android.location.LocationManager",
+        "method_name": "addNmeaListener",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Adds an NMEA listener",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;addProximityAlert": {
+        "id": "android.location.LocationManager;addProximityAlert",
+        "class_name": "android.location.LocationManager",
+        "method_name": "addProximityAlert",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Set a proximity alert for the location given by the position (latitude, longitude) and the given radius.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;addTestProvider": {
+        "id": "android.location.LocationManager;addTestProvider",
+        "class_name": "android.location.LocationManager",
+        "method_name": "addTestProvider",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Creates a test location provider and adds it to the set of active providers. This provider will replace any provider with the same name that exists prior to this call.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;clearTestProviderEnabled": {
+        "id": "android.location.LocationManager;clearTestProviderEnabled",
+        "class_name": "android.location.LocationManager",
+        "method_name": "clearTestProviderEnabled",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "disable a test provider",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;clearTestProviderLocation": {
+        "id": "android.location.LocationManager;clearTestProviderLocation",
+        "class_name": "android.location.LocationManager",
+        "method_name": "clearTestProviderLocation",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Does nothing.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;clearTestProviderStatus": {
+        "id": "android.location.LocationManager;clearTestProviderStatus",
+        "class_name": "android.location.LocationManager",
+        "method_name": "clearTestProviderStatus",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "No description as the method is depricated ",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;getAllProviders": {
+        "id": "android.location.LocationManager;getAllProviders",
+        "class_name": "android.location.LocationManager",
+        "method_name": "getAllProviders",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Returns a list of the names of all known location providers.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;getGnssHardwareModelName": {
+        "id": "android.location.LocationManager;getGnssHardwareModelName",
+        "class_name": "android.location.LocationManager",
+        "method_name": "getGnssHardwareModelName",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Returns the Model Name (including Vendor and Hardware/Software Version) of the GNSS hardware driver.\nNo device-specific serial number or ID is returned from this API.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;getGnssYearOfHardware": {
+        "id": "android.location.LocationManager;getGnssYearOfHardware",
+        "class_name": "android.location.LocationManager",
+        "method_name": "getGnssYearOfHardware",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Returns the model year of the GNSS hardware and software build. ",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;getGpsStatus": {
+        "id": "android.location.LocationManager;getGpsStatus",
+        "class_name": "android.location.LocationManager",
+        "method_name": "getGpsStatus",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Retrieves information about the current status of the GPS engine. ",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;getLastKnownLocation": {
+        "id": "android.location.LocationManager;getLastKnownLocation",
+        "class_name": "android.location.LocationManager",
+        "method_name": "getLastKnownLocation",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Gets the last known location from the given provider, or null if there is no last known location.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;getProvider": {
+        "id": "android.location.LocationManager;getProvider",
+        "class_name": "android.location.LocationManager",
+        "method_name": "getProvider",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Returns the information about the location provider with the given name, or null if no provider exists by that name.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;getProviders": {
+        "id": "android.location.LocationManager;getProviders",
+        "class_name": "android.location.LocationManager",
+        "method_name": "getProviders",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Returns a list of the names of location providers. Only providers that the caller has permission to access will be returned.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;isProviderEnabled": {
+        "id": "android.location.LocationManager;isProviderEnabled",
+        "class_name": "android.location.LocationManager",
+        "method_name": "isProviderEnabled",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Returns the current enabled/disabled status of the given provider. ",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;registerGnssMeasurementsCallback": {
+        "id": "android.location.LocationManager;registerGnssMeasurementsCallback",
+        "class_name": "android.location.LocationManager",
+        "method_name": "registerGnssMeasurementsCallback",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Registers a GPS Measurement callback which will run on a binder thread.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;registerGnssNavigationMessageCallback": {
+        "id": "android.location.LocationManager;registerGnssNavigationMessageCallback",
+        "class_name": "android.location.LocationManager",
+        "method_name": "registerGnssNavigationMessageCallback",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Registers a GNSS Navigation Message callback.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;registerGnssStatusCallback": {
+        "id": "android.location.LocationManager;registerGnssStatusCallback",
+        "class_name": "android.location.LocationManager",
+        "method_name": "registerGnssStatusCallback",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Registers a GNSS status callback",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;removeGpsStatusListener": {
+        "id": "android.location.LocationManager;removeGpsStatusListener",
+        "class_name": "android.location.LocationManager",
+        "method_name": "removeGpsStatusListener",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Removes a GPS status listener.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;removeNmeaListener": {
+        "id": "android.location.LocationManager;removeNmeaListener",
+        "class_name": "android.location.LocationManager",
+        "method_name": "removeNmeaListener",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Removes an NMEA listener.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;removeProximityAlert": {
+        "id": "android.location.LocationManager;removeProximityAlert",
+        "class_name": "android.location.LocationManager",
+        "method_name": "removeProximityAlert",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Removes the proximity alert with the given PendingIntent.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;removeTestProvider": {
+        "id": "android.location.LocationManager;removeTestProvider",
+        "class_name": "android.location.LocationManager",
+        "method_name": "removeTestProvider",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Removes the test location provider with the given name or does nothing if no such test location provider exists.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;removeUpdates": {
+        "id": "android.location.LocationManager;removeUpdates",
+        "class_name": "android.location.LocationManager",
+        "method_name": "removeUpdates",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Removes location updates for the specified LocationListener. Following this call, the listener will no longer receive location updates.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;requestLocationUpdates": {
+        "id": "android.location.LocationManager;requestLocationUpdates",
+        "class_name": "android.location.LocationManager",
+        "method_name": "requestLocationUpdates",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Register for location updates using a provider selected through the given Criteria, and callbacks delivered via the provided PendingIntent.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;requestSingleUpdate": {
+        "id": "android.location.LocationManager;requestSingleUpdate",
+        "class_name": "android.location.LocationManager",
+        "method_name": "requestSingleUpdate",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Register for a single location update using a named provider and pending intent.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;sendExtraCommand": {
+        "id": "android.location.LocationManager;sendExtraCommand",
+        "class_name": "android.location.LocationManager",
+        "method_name": "sendExtraCommand",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Sends additional commands to a location provider. ",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;setTestProviderEnabled": {
+        "id": "android.location.LocationManager;setTestProviderEnabled",
+        "class_name": "android.location.LocationManager",
+        "method_name": "setTestProviderEnabled",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Sets the given test provider to be enabled or disabled.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;setTestProviderLocation": {
+        "id": "android.location.LocationManager;setTestProviderLocation",
+        "class_name": "android.location.LocationManager",
+        "method_name": "setTestProviderLocation",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Sets a new location for the given test provider.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;setTestProviderStatus": {
+        "id": "android.location.LocationManager;setTestProviderStatus",
+        "class_name": "android.location.LocationManager",
+        "method_name": "setTestProviderStatus",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "no effect ",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;unregisterGnssMeasurementsCallback": {
+        "id": "android.location.LocationManager;unregisterGnssMeasurementsCallback",
+        "class_name": "android.location.LocationManager",
+        "method_name": "unregisterGnssMeasurementsCallback",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Unregisters a GPS Measurement callback.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;unregisterGnssStatusCallback": {
+        "id": "android.location.LocationManager;unregisterGnssStatusCallback",
+        "class_name": "android.location.LocationManager",
+        "method_name": "unregisterGnssStatusCallback",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Removes a GNSS status callback.",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;getBestProvider": {
+        "id": "android.location.LocationManager;getBestProvider",
+        "class_name": "android.location.LocationManager",
+        "method_name": "getBestProvider",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Returns the name of the provider that best meets the given criteria. ",
+        "related_api": "null"
+    },
+    "android.location.LocationManager;isLocationEnabled": {
+        "id": "android.location.LocationManager;isLocationEnabled",
+        "class_name": "android.location.LocationManager",
+        "method_name": "isLocationEnabled",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Returns the current enabled/disabled state of location. ",
+        "related_api": "null"
+    },
+    "android.net.ConnectivityManager;getActiveNetwork": {
+        "id": "android.net.ConnectivityManager;getActiveNetwork",
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "getActiveNetwork",
+        "permissions_required": [
+            "ACCESS_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Network"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Returns a Network object corresponding to the currently active default data network.",
+        "related_api": "null"
+    },
+    "android.net.ConnectivityManager;getActiveNetworkInfo": {
+        "id": "android.net.ConnectivityManager;getActiveNetworkInfo",
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "getActiveNetworkInfo",
+        "permissions_required": [
+            "ACCESS_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Network"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Returns details about the currently active default data network. When connected, this network is the default route for outgoing connections",
+        "related_api": "null"
+    },
+    "android.net.ConnectivityManager;getAllNetworkInfo": {
+        "id": "android.net.ConnectivityManager;getAllNetworkInfo",
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "getAllNetworkInfo",
+        "permissions_required": [
+            "ACCESS_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Network"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Returns connection status information about all network types supported by the device.",
+        "related_api": "null"
+    },
+    "android.net.ConnectivityManager;getAllNetworks": {
+        "id": "android.net.ConnectivityManager;getAllNetworks",
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "getAllNetworks",
+        "permissions_required": [
+            "ACCESS_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Network"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Returns an array of all Network currently tracked by the framework.",
+        "related_api": "null"
+    },
+    "android.net.ConnectivityManager;getLinkProperties": {
+        "id": "android.net.ConnectivityManager;getLinkProperties",
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "getLinkProperties",
+        "permissions_required": [
+            "ACCESS_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Network"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Get the LinkProperties for the given Network. This will return null if the network is unknown.",
+        "related_api": "null"
+    },
+    "android.net.ConnectivityManager;getMultipathPreference": {
+        "id": "android.net.ConnectivityManager;getMultipathPreference",
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "getMultipathPreference",
+        "permissions_required": [
+            "ACCESS_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Network"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Provides a hint to the calling application on whether it is desirable to use the multinetwork APIs ",
+        "related_api": "null"
+    },
+    "android.net.ConnectivityManager;getNetworkCapabilities": {
+        "id": "android.net.ConnectivityManager;getNetworkCapabilities",
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "getNetworkCapabilities",
+        "permissions_required": [
+            "ACCESS_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Network"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Get the NetworkCapabilities for the given Network. This will return null if the network is unknown.",
+        "related_api": "null"
+    },
+    "android.net.ConnectivityManager;getNetworkInfo": {
+        "id": "android.net.ConnectivityManager;getNetworkInfo",
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "getNetworkInfo",
+        "permissions_required": [
+            "ACCESS_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Network"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Returns connection status information about a particular network type",
+        "related_api": "null"
+    },
+    "android.net.ConnectivityManager;getNetworkPreference": {
+        "id": "android.net.ConnectivityManager;getNetworkPreference",
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "getNetworkPreference",
+        "permissions_required": [
+            "ACCESS_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Network"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Retrieves the current preferred network type.",
+        "related_api": "null"
+    },
+    "android.net.ConnectivityManager;isActiveNetworkMetered": {
+        "id": "android.net.ConnectivityManager;isActiveNetworkMetered",
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "isActiveNetworkMetered",
+        "permissions_required": [
+            "ACCESS_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Network"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Returns if the currently active data network is metered.",
+        "related_api": "null"
+    },
+    "android.net.ConnectivityManager;registerDefaultNetworkCallback": {
+        "id": "android.net.ConnectivityManager;registerDefaultNetworkCallback",
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "registerDefaultNetworkCallback",
+        "permissions_required": [
+            "ACCESS_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Network"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Registers to receive notifications about changes in the system default network.",
+        "related_api": "null"
+    },
+    "android.net.ConnectivityManager;registerNetworkCallback": {
+        "id": "android.net.ConnectivityManager;registerNetworkCallback",
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "registerNetworkCallback",
+        "permissions_required": [
+            "ACCESS_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Network"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Registers a PendingIntent to be sent when a network is available which satisfies the given NetworkRequest. ",
+        "related_api": "null"
+    },
+    "android.net.ConnectivityManager;requestNetwork": {
+        "id": "android.net.ConnectivityManager;requestNetwork",
+        "class_name": "android.net.ConnectivityManager",
+        "method_name": "requestNetwork",
+        "permissions_required": [
+            "CHANGE_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Network"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "The platform will evaluate which network is the best at its own discretion.",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;addNetworkSuggestions": {
+        "id": "android.net.wifi.WifiManager;addNetworkSuggestions",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "addNetworkSuggestions",
+        "permissions_required": [
+            "CHANGE_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Wifi"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Provide a list of network suggestions to the device. ",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;addNetwork": {
+        "id": "android.net.wifi.WifiManager;addNetwork",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "addNetwork",
+        "permissions_required": [
+            "CHANGE_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Wifi"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Add a new network description to the set of configured networks.",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;addOrUpdatePasspointConfiguration": {
+        "id": "android.net.wifi.WifiManager;addOrUpdatePasspointConfiguration",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "addOrUpdatePasspointConfiguration",
+        "permissions_required": [
+            "CHANGE_WIFI_STATE"
+        ],
+        "personal_information_collected": [
+            "Wifi"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Add or update a Passpoint configuration. The configuration provides a credential for connecting to Passpoint networks that are operated by the Passpoint service provider specified in the configuration.",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;calculateSignalLevel": {
+        "id": "android.net.wifi.WifiManager;calculateSignalLevel",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "calculateSignalLevel",
+        "permissions_required": [
+            "CHANGE_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Wifi"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Calculates the level of the signal. This should be used any time a signal is being shown.",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;cancelWps": {
+        "id": "android.net.wifi.WifiManager;cancelWps",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "cancelWps",
+        "permissions_required": [
+            "CHANGE_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Wifi"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "no effects.",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;compareSignalLevel": {
+        "id": "android.net.wifi.WifiManager;compareSignalLevel",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "compareSignalLevel",
+        "permissions_required": [
+            "CHANGE_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Wifi"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Compares two signal strengths..",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;createMulticastLock": {
+        "id": "android.net.wifi.WifiManager;createMulticastLock",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "createMulticastLock",
+        "permissions_required": [
+            "CHANGE_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Wifi"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Create a new MulticastLock.",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;createWifiLock": {
+        "id": "android.net.wifi.WifiManager;createWifiLock",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "createWifiLock",
+        "permissions_required": [
+            "CHANGE_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Wifi"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Creates a new WifiLock.",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;disableNetwork": {
+        "id": "android.net.wifi.WifiManager;disableNetwork",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "disableNetwork",
+        "permissions_required": [
+            "CHANGE_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Wifi"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Disable a configured network. ",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;disconnect": {
+        "id": "android.net.wifi.WifiManager;disconnect",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "disconnect",
+        "permissions_required": [
+            "CHANGE_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Wifi"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Disassociate from the currently active access point.",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;enableNetwork": {
+        "id": "android.net.wifi.WifiManager;enableNetwork",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "enableNetwork",
+        "permissions_required": [
+            "CHANGE_NETWORK_STATE"
+        ],
+        "personal_information_collected": [
+            "Wifi"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Allow a previously configured network to be associated with.",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;getDhcpInfo": {
+        "id": "android.net.wifi.WifiManager;getDhcpInfo",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "getDhcpInfo",
+        "permissions_required": [
+            "CHANGE_WIFI_STATE"
+        ],
+        "personal_information_collected": [
+            "Wifi"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Return the DHCP-assigned addresses from the last successful DHCP request, if any.",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;getMaxNumberOfNetworkSuggestionsPerApp": {
+        "id": "android.net.wifi.WifiManager;getMaxNumberOfNetworkSuggestionsPerApp",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "getMaxNumberOfNetworkSuggestionsPerApp",
+        "permissions_required": [
+            "CHANGE_WIFI_STATE"
+        ],
+        "personal_information_collected": [
+            "Wifi"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Returns the max number of network suggestions that are allowed per app on the device.",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;getWifiState": {
+        "id": "android.net.wifi.WifiManager;getWifiState",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "getWifiState",
+        "permissions_required": [
+            "CHANGE_WIFI_STATE"
+        ],
+        "personal_information_collected": [
+            "Wifi"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Gets the Wi-Fi enabled state.",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;getConnectionInfo": {
+        "id": "android.net.wifi.WifiManager;getConnectionInfo",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "getConnectionInfo",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Return dynamic information about the current Wi-Fi connection, if any is active.",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;getPasspointConfigurations": {
+        "id": "android.net.wifi.WifiManager;getPasspointConfigurations",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "getPasspointConfigurations",
+        "permissions_required": [
+            "NETWORK_SETTINGS",
+            "NETWORK_SETUP_WIZARD"
+        ],
+        "personal_information_collected": [
+            "Network"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Return the list of installed Passpoint configurations added by the caller.",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;getScanResults": {
+        "id": "android.net.wifi.WifiManager;getScanResults",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "getScanResults",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION"
+        ],
+        "personal_information_collected": [
+            "Location"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Return the results of the latest access point scan.",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;removeNetworkSuggestions": {
+        "id": "android.net.wifi.WifiManager;removeNetworkSuggestions",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "removeNetworkSuggestions",
+        "permissions_required": [
+            "CHANGE_WIFI_STATE"
+        ],
+        "personal_information_collected": [
+            "Wifi"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Remove some or all of the network suggestions that were previously provided by the app.",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;setWifiEnabled": {
+        "id": "android.net.wifi.WifiManager;setWifiEnabled",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "setWifiEnabled",
+        "permissions_required": [
+            "CHANGE_WIFI_STATE"
+        ],
+        "personal_information_collected": [
+            "Wifi"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Enable or disable Wi-Fi.",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;startScan": {
+        "id": "android.net.wifi.WifiManager;startScan",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "startScan",
+        "permissions_required": [
+            "CHANGE_WIFI_STATE"
+        ],
+        "personal_information_collected": [
+            "Wifi"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Request a scan for access points. Returns immediately. ",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;removePasspointConfiguration": {
+        "id": "android.net.wifi.WifiManager;removePasspointConfiguration",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "removePasspointConfiguration",
+        "permissions_required": [
+            "NETWORK_SETTINGS",
+            "NETWORK_CARRIER_PROVISIONING"
+        ],
+        "personal_information_collected": [
+            "Network"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Remove the Passpoint configuration identified by its FQDN (Fully Qualified Domain Name) added by the caller.",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;getConfiguredNetworks": {
+        "id": "android.net.wifi.WifiManager;getConfiguredNetworks",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "getConfiguredNetworks",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_WIFI_STATE"
+        ],
+        "personal_information_collected": [
+            "Location",
+            "Wifi"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Return a list of all the networks configured for the current foreground user. ",
+        "related_api": "null"
+    },
+    "android.net.wifi.WifiManager;startLocalOnlyHotspot": {
+        "id": "android.net.wifi.WifiManager;startLocalOnlyHotspot",
+        "class_name": "android.net.wifi.WifiManager",
+        "method_name": "startLocalOnlyHotspot",
+        "permissions_required": [
+            "ACCESS_FINE_LOCATION",
+            "CHANGE_WIFI_STATE"
+        ],
+        "personal_information_collected": [
+            "Location",
+            "Wifi"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Request a local only hotspot that an application can use to communicate between co-located devices connected to the created WiFi hotspot.",
+        "related_api": "null"
+    }
+}
