@@ -133,7 +133,5 @@ dmypy.json
 
 *.ipynb
 logfile.txt
-pdrolyze/*.txt
-
-
-Notepad++ Setting Screenshot.png
+pdroid/*.txt
+foo.py

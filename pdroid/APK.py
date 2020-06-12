@@ -1,21 +1,24 @@
 """Module for handling privacy-related data in APK and Android"""
 
-# TODO - 
-# 3. Try not to import Androguard objects inside the APK attributes
+import json
+import os
+from os import path
 
 from androguard.misc import AnalyzeAPK
 
-from pdrolyze.utils import get_api_methods, map_api_to_pi, print_src_code
+from pdroid.utils import (get_api, map_api_to_pi, print_src_code)
+
+CWD = os.getcwd()
+PDROID = path.join(CWD, "pdroid")
+METADATA = path.join(PDROID, "api_metadata_w_description.json")
 
 class APK():
 
     def __init__(self, apk, apk_analysis):
-        self._a = apk # a
-        self._dx = apk_analysis # dx
         self._package_name = apk.get_package()
         self._app_name = apk.get_app_name()
         self._permissions_in_xml = apk.get_permissions()
-        self._api_methods = self._extract_api_methods()
+        self._api_methods = self._extract_api_methods(apk_analysis)
         self._picu = self._get_picu()
         self._api_callers = self._extract_callers(self._api_methods)
         self._api_caller_callers = self._extract_callers(self._api_callers)
@@ -29,18 +32,24 @@ class APK():
     def get_app_name(self):
         return self._app_name
     
-    def _extract_api_methods(self):
+    def _extract_api_methods(self, apk_analysis):
         """Extract all the API methods declared in the apk"""
 
         api_methods = []
-        all_methods = dict([(x.method.name, x) for x in self._dx.methods.values() ]) # TODO Optimize this
-        for each_method in get_api_methods():
-            try:
-                method_analysis_object = PrivacyCode(all_methods[each_method])
-                api_methods.append(method_analysis_object)
-            except KeyError:
-                pass
+        get_method_id = lambda x: x.class_name[1:].replace("/", ".") + x.name
+        assert path.exists(METADATA), f"The file {METADATA} does not exist"
         
+        with open(METADATA, 'r') as metadata_file:
+            metadata = json.load(metadata_file)
+
+            for each_method in apk_analysis.methods.values():
+                method_id = get_method_id(each_method)
+                try:
+                    api_metadata = metadata[method_id]
+                    api_methods.append(PrivacyCode(each_method, is_android_api=True))
+                except KeyError:
+                    pass
+
         return api_methods
        
     def _extract_callers(self, list_of_methods):
@@ -92,25 +101,36 @@ class APK():
         return f"{self.get_package_name()};{self.get_app_name()}"
 
     def __repr__(self):
-        return f"<prdolyze.APK {self.__str__()}>"
+        return f"<pdroid.APK {self.__str__()}>"
         
 
 class PrivacyCode:
     """A wrapper class for `androguard.core.analysis.MethodAnalysis`"""
 
-    def __init__(self, method_analysis_object):
+    def __init__(self, method_analysis_object, is_android_api=False):
         self._method_analysis_object = method_analysis_object
+        self._class_name = self._method_analysis_object.class_name.replace("/", ".")[1:]
         self._method_name = self._method_analysis_object.method.name
-        self._class_name = self._method_analysis_object.class_name.replace("L", "").replace(";", "")
+        self._id = self._class_name + self._method_name
+        if is_android_api:
+            api_metadata = get_api(self._id)
+            if api_metadata is not None:
+                self.permissions_required = api_metadata['permissions_required']
+                self.personal_information_collected = api_metadata['personal_information_collected']
+                self.is_android_api = True
+                self.api_description = api_metadata['api_description']
 
-    def get_ag_method_name(self):
-        return
-    
     def get_method_name(self):
         return self._method_name
+    
+    def get_class_name(self):
+        return self._class_name
+    
+    def get_id(self):
+        return self._id
 
     def get_ag_class_name(self):
-        return "L" + self.get_class_name() + ";"
+        return "L" + self.get_class_name().replace(".", "/") + ";"
     
     def is_method_analysis_object_external(self):
         return self._method_analysis_object.is_external()
@@ -166,4 +186,4 @@ class PrivacyCode:
         return f"{self.get_class_name()}->{self.get_method_name()};{self._method_analysis_object.descriptor}"
     
     def __repr__(self):
-        return f"<pdrolyze.PrivacyCode {self.__str__()}"
+        return f"<pdroid.PrivacyCode {self.__str__()}>"
