@@ -133,4 +133,5 @@ dmypy.json
 
 *.ipynb
 logfile.txt
-pdrolyze/*.txt
+pdroid/*.txt
+foo.py
