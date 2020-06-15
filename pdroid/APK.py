@@ -6,11 +6,9 @@ from os import path
 
 from androguard.misc import AnalyzeAPK
 
-from pdroid.utils import (get_api, map_api_to_pi, print_src_code)
-
 CWD = os.getcwd()
-PDROID = path.join(CWD, "pdroid")
-METADATA = path.join(PDROID, "api_metadata_w_description.json")
+METADATA_DIR = path.join(CWD, "metadata")
+METADATA = path.join(METADATA_DIR, "api_metadata.json")
 
 class APK():
 
@@ -19,7 +17,7 @@ class APK():
         self._app_name = apk.get_app_name()
         self._permissions_in_xml = apk.get_permissions()
         self._api_methods = self._extract_api_methods(apk_analysis)
-        self._picu = self._get_picu()
+        self._picu = self.get_picu()
         self._api_callers = self._extract_callers(self._api_methods)
         self._api_caller_callers = self._extract_callers(self._api_callers)
     
@@ -64,23 +62,21 @@ class APK():
         
         return [x for x in callers.keys()]
 
-    # TODO - Modify this method
-    def _get_picu(self):
+    def get_picu(self):
         """Return list of personal information collected/used (picu) by all methods"""
         picu = []
 
         for each_api_method in self._api_methods:
-            personal_information = map_api_to_pi(each_api_method.get_method_name())
-            if personal_information not in picu:
-                picu.append(personal_information)
+            picu.extend(each_api_method.get_personal_information_collected())
 
-        return picu
+        return list(set(picu))
     
     def export(self):
         attribute_dictionary = dict([
             ("app_id", str(self.get_package_name())),
             ("title", str(self.get_app_name())),
             ("permissions_in_xml", [str(x) for x in self.get_permissions_in_xml()]),
+            ("personal_information_processed", self.get_picu())
         ])
 
         # api_callers = []
