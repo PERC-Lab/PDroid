@@ -202,7 +202,7 @@ class PrivacyMethod(AbstractPrivacyMethod):
     def export(self, include_src_code=True):
         attribute_dictionary = super().__export()
         attr_dict = dict([
-            ("id", self.get_id())
+            ("id", self.get_id()),
             ("personal_information_collected", self.get_personal_information_collected()),
             ("permissions_required", self.get_permissions_required()),
         ])
