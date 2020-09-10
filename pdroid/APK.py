@@ -19,7 +19,7 @@ class APK():
         self._api_methods = self._extract_api_methods(apk_analysis)
         self._picu = self.get_picu()
         self._api_callers = self._extract_callers(self._api_methods)
-        self._api_caller_callers = self._extract_callers(self._api_callers)
+
     
     def get_permissions_in_xml(self):
         return self._permissions_in_xml
@@ -52,15 +52,14 @@ class APK():
        
     def _extract_callers(self, list_of_methods):
         """Returns a list of methods that call methods in `list_of_methods`"""
-        callers = {}
+        callers = []
 
         for each_meth in list_of_methods:
             for _, call, _ in each_meth._method_analysis_object.get_xref_from():
                 caller = PrivacyMethod(call, each_meth)
-                if caller not in callers:
-                    callers[caller] = ""
+                callers.append(caller)
         
-        return [x for x in callers.keys()]
+        return callers
 
     def get_picu(self):
         """Return list of personal information collected/used (picu) by all methods"""
@@ -78,18 +77,6 @@ class APK():
             ("permissions_in_xml", [str(x) for x in self.get_permissions_in_xml()]),
             ("personal_information_processed", self.get_picu())
         ])
-
-        # api_callers = []
-        # for each_api_caller in self._api_callers:
-        #     if not each_api_caller.is_method_analysis_object_external():
-        #         api_callers.append(each_api_caller.export())
-        # attribute_dictionary["api_callers"] = api_callers
-
-        # api_caller_callers = []
-        # for each_api_double_caller in self._api_caller_callers:
-        #     if not each_api_double_caller.is_method_analysis_object_external():
-        #         api_caller_callers.append(each_api_double_caller.export())
-        # attribute_dictionary["api_double_callers"] = api_caller_callers
 
         return attribute_dictionary
 
