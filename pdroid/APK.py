@@ -1,10 +1,12 @@
 """Module for handling privacy-related methods and data in Android APK"""
 
 import json
+import re
 import os
 from os import path
 
 from androguard.misc import AnalyzeAPK
+from androguard.core.mutf8 import MUTF8String
 
 CWD = os.getcwd()
 METADATA_DIR = path.join(CWD, "metadata")
@@ -49,7 +51,7 @@ class APK():
                     pass
 
         return api_methods
-       
+
     def _extract_callers(self, list_of_methods):
         """Returns a list of methods that call methods in `list_of_methods`"""
         callers = []
@@ -92,10 +94,23 @@ class AbstractPrivacyMethod:
 
     def __init__(self, method_analysis_object):
         self._method_analysis_object = method_analysis_object
-        self._class_name = self._method_analysis_object.class_name.replace("/", ".")[1:]
+        self._class_name = self.refine_class_name(self._method_analysis_object.class_name)
         self._method_name = self._method_analysis_object.method.name
         self._id = self._class_name + self._method_name
     
+    @staticmethod
+    def refine_class_name(method_name):
+        """Remove the first 'L', replace '/' with '.', and remove '$<int>' instances"""
+        refined_method_name = str(method_name).replace("/", ".")[1:]
+        # print(f"Type of str = {type(refined_method_name)}")
+        regex_match = re.search("\$.*;", refined_method_name)
+        
+        if regex_match is not None:
+            start, end = regex_match.span()
+            refined_method_name = refined_method_name[:start] + refined_method_name[end-1]
+             
+        return MUTF8String.from_str(refined_method_name)
+
     def get_class_name(self):
         return self._class_name
     
