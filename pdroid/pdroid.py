@@ -52,15 +52,18 @@ class APK():
 
         return api_methods
 
-    def _extract_callers(self, list_of_methods):
-        """Returns a list of methods that call methods in `list_of_methods`"""
-        callers = []
+    def _extract_callers(self, api_called):
+        """Returns a list of methods that call methods in `api_called`"""
+        callers = {} 
 
-        for each_meth in list_of_methods:
+        for each_meth in api_called:
             for _, call, _ in each_meth._method_analysis_object.get_xref_from():
                 caller = PrivacyMethod(call, each_meth)
-                callers.append(caller)
-        
+                try:
+                    if each_meth not in callers[caller.get_id()]['apis_called']:
+                        callers[caller.get_id()]['apis_called'].append(each_meth)
+                except KeyError:
+                    callers[caller.get_id()] = {'caller': caller, 'apis_called': [each_meth]}
         return callers
 
     def get_picu(self):
@@ -81,7 +84,6 @@ class APK():
         ])
 
         return attribute_dictionary
-
 
     def __str__(self):
         return f"{self.get_package_name()};{self.get_app_name()}"
@@ -163,7 +165,7 @@ class PrivacyAPI(AbstractPrivacyMethod):
         return f"{self.get_id()}"
 
     def __repr__(self):
-        return f"<pdroid.APK.PrivacyAPI {self.__str__()}"
+        return f"<pdroid.APK.PrivacyAPI {self.__str__()}>"
 
 class PrivacyMethod(AbstractPrivacyMethod):
 
