@@ -1205,5 +1205,436 @@
         "method_called": "null",
         "api_description": "Request a local only hotspot that an application can use to communicate between co-located devices connected to the created WiFi hotspot.",
         "related_api": "null"
+    },
+    "android.accounts.AccountManager;addAccount": {
+        "id": "android.accounts.AccountManager;addAccount",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "addAccount",
+        "permissions_required": [
+            "MANAGE_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Asks the user to add an account of a specified type. The authenticator for this account type processes this request with the appropriate user interface. If the user does elect to create a new account, the account name is returned.",
+        "related_api": "null"
+    },
+
+    "android.accounts.AccountManager;addAccountExplicitly": {
+        "id": "android.accounts.AccountManager;addAccountExplicitly",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "addAccountExplicitly",
+        "permissions_required": [
+            "AUTHENTICATE_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Adds an account directly to the AccountManager. Additionally it specifies Account visibility for given list of packages",
+        "related_api": "null"
+    },
+    "android.accounts.AccountManager;addOnAccountsUpdatedListener": {
+        "id": "android.accounts.AccountManager;addOnAccountsUpdatedListener",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "addOnAccountsUpdatedListener",
+        "permissions_required": [
+            "GET_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Adds an OnAccountsUpdateListener to this instance of the AccountManager. This listener will be notified whenever user or AbstractAccountAuthenticator made changes to accounts of given types related to the caller - either list of accounts returned by getAccounts() was changed, or new account was added for which user can grant access to the caller.",
+        "related_api": "getAccounts"
+    },
+    "android.accounts.AccountManager;blockingGetAuthToken": {
+        "id": "android.accounts.AccountManager;blockingGetAuthToken",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "blockingGetAuthToken",
+        "permissions_required": [
+            "USE_CREDENTIALS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "This method may block while a network request completes, and must never be made from the main thread.",
+        "related_api": "getAuthToken"
+    },
+    "android.accounts.AccountManager;clearPassword": {
+        "id": "android.accounts.AccountManager;clearPassword",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "clearPassword",
+        "permissions_required": [
+            "MANAGE_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "This method only successfully clear the account's password when the caller has the same signature as the authenticator that owns the specified account. Otherwise, this method will silently fail.",
+        "related_api": "null"
+    },
+    "android.accounts.AccountManager;confirmCredentials": {
+        "id": "android.accounts.AccountManager;confirmCredentials",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "confirmCredentials",
+        "permissions_required": [
+            "MANAGE_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Confirms that the user knows the password for an account to make extra sure they are the owner of the account.",
+        "related_api": "null"
+    },
+    "android.accounts.AccountManager;editProperties": {
+        "id": "android.accounts.AccountManager;editProperties",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "editProperties",
+        "permissions_required": [
+            "MANAGE_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Offers the user an opportunity to change an authenticator's settings. These properties are for the authenticator in general, not a particular account. Not all authenticators support this method.",
+        "related_api": "null"
+    },
+    "android.accounts.AccountManager;getAccounts": {
+        "id": "android.accounts.AccountManager;getAccounts",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "getAccounts",
+        "permissions_required": [
+            "GET_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Lists all accounts visible to the caller regardless of type. ",
+        "related_api": "null"
+    },
+
+
+    "android.accounts.AccountManager;getAccountsByType": {
+        "id": "android.accounts.AccountManager;getAccountsByType",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "getAccountsByType",
+        "permissions_required": [
+            "GET_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Lists all accounts of particular type visible to the caller. These accounts may be visible because the user granted access to the account, or the AbstractAccountAuthenticator managing the account did so or because the client shares a signature with the managing AbstractAccountAuthenticator.",
+        "related_api": "null"
+    },
+
+    "android.accounts.AccountManager;getAccountsByTypeAndFeatures": {
+        "id": "android.accounts.AccountManager;getAccountsByTypeAndFeatures",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "getAccountsByTypeAndFeatures",
+        "permissions_required": [
+            "GET_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Lists all accounts of a type which have certain features.",
+        "related_api": "null"
+    },
+    "android.accounts.AccountManager;getAuthToken": {
+        "id": "android.accounts.AccountManager;getAuthToken",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "getAuthToken",
+        "permissions_required": [
+            "USE_CREDENTIALS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Gets an auth token of the specified type for a particular account, optionally raising a notification if the user must enter credentials.",
+        "related_api": "null"
+    },
+    "android.accounts.AccountManager;getAuthTokenByFeatures": {
+        "id": "android.accounts.AccountManager;getAuthTokenByFeatures",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "getAuthTokenByFeatures",
+        "permissions_required": [
+            "MANAGE_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "This method gets a list of the accounts matching specific type and feature set which are visible to the caller.",
+        "related_api": "getAccountsByType"
+    },
+    "android.accounts.AccountManager;getPassword": {
+        "id": "android.accounts.AccountManager;getPassword",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "getPassword",
+        "permissions_required": [
+            "AUTHENTICATE_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Gets the saved password associated with the account. This is intended for authenticators and related code; applications should get an auth token instead.",
+        "related_api": "null"
+    },
+    "android.accounts.AccountManager;getUserData": {
+        "id": "android.accounts.AccountManager;getUserData",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "getUserData",
+        "permissions_required": [
+            "AUTHENTICATE_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Gets the user data named by \"key\" associated with the account. This is intended for authenticators and related code to store arbitrary metadata along with accounts. The meaning of the keys and values is up to the authenticator for the account.",
+        "related_api": "null"
+    },
+    "android.accounts.AccountManager;hasFeatures": {
+        "id": "android.accounts.AccountManager;hasFeatures",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "hasFeatures",
+        "permissions_required": [
+            "GET_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Finds out whether a particular account has all the specified features. Account features are authenticator-specific string tokens identifying boolean account properties. ",
+        "related_api": "null"
+    },
+    "android.accounts.AccountManager;invalidateAuthToken": {
+        "id": "android.accounts.AccountManager;invalidateAuthToken",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "invalidateAuthToken",
+        "permissions_required": [
+            "MANAGE_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Removes an auth token from the AccountManager's cache. Does nothing if the auth token is not currently in the cache. ",
+        "related_api": "null"
+    },
+
+"android.accounts.AccountManager;notifyAccountAuthenticated": {
+        "id": "android.accounts.AccountManager;notifyAccountAuthenticated",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "notifyAccountAuthenticated",
+        "permissions_required": [
+            "AUTHENTICATE_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Notifies the system that the account has just been authenticated. This information may be used by other applications to verify the account. This should be called only when the user has entered correct credentials for the account. ",
+        "related_api": "null"
+    },
+    "android.accounts.AccountManager;peekAuthToken": {
+        "id": "android.accounts.AccountManager;peekAuthToken",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "peekAuthToken",
+        "permissions_required": [
+            "AUTHENTICATE_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Gets an auth token from the AccountManager's cache. If no auth token is cached for this account, null will be returned -- a new auth token will not be generated, and the server will not be contacted. Intended for use by the authenticator, not directly by applications.",
+        "related_api": "null"
+    },
+    "android.accounts.AccountManager;removeAccount": {
+        "id": "android.accounts.AccountManager;removeAccount",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "removeAccount",
+        "permissions_required": [
+            "MANAGE_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Removes an account from the AccountManager. Does nothing if the account does not exist. Does not delete the account from the server. The authenticator may have its own policies preventing account deletion, in which case the account will not be deleted.",
+        "related_api": "null"
+    },
+    "android.accounts.AccountManager;removeAccountExplicitly": {
+        "id": "android.accounts.AccountManager;removeAccountExplicitly",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "removeAccountExplicitly",
+        "permissions_required": [
+            "AUTHENTICATE_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Removes an account directly. Normally used by authenticators, not directly by applications. Does not delete the account from the server. The authenticator may have its own policies preventing account deletion, in which case the account will not be deleted. ",
+        "related_api": "null"
+    },
+    "android.accounts.AccountManager;renameAccount": {
+        "id": "android.accounts.AccountManager;renameAccount",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "renameAccount",
+        "permissions_required": [
+            "AUTHENTICATE_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Rename the specified Account. This is equivalent to removing the existing account and adding a new renamed account with the old account's user data. ",
+        "related_api": "null"
+    },
+    "android.accounts.AccountManager;setAuthToken": {
+        "id": "android.accounts.AccountManager;setAuthToken",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "setAuthToken",
+        "permissions_required": [
+            "AUTHENTICATE_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Adds an auth token to the AccountManager cache for an account. If the account does not exist then this call has no effect. Replaces any previous auth token for this account and auth token type. Intended for use by the authenticator, not directly by applications. ",
+        "related_api": "null"
+    },
+    "android.accounts.AccountManager;setPassword": {
+        "id": "android.accounts.AccountManager;setPassword",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "setPassword",
+        "permissions_required": [
+            "AUTHENTICATE_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Sets or forgets a saved password. This modifies the local copy of the password used to automatically authenticate the user; it does not change the user's account password on the server. Intended for use by the authenticator, not directly by applications.",
+        "related_api": "null"
+    },
+    "android.accounts.AccountManager;setUserData": {
+        "id": "android.accounts.AccountManager;setUserData",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "setUserData",
+        "permissions_required": [
+            "AUTHENTICATE_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Sets one userdata key for an account. Intended by use for the authenticator to stash state for itself, not directly by applications. The meaning of the keys and values is up to the authenticator.",
+        "related_api": "null"
+    },
+    "android.accounts.AccountManager;updateCredentials": {
+        "id": "android.accounts.AccountManager;updateCredentials",
+        "class_name": "android.accounts.AccountManager",
+        "method_name": "updateCredentials",
+        "permissions_required": [
+            "MANAGE_ACCOUNTS"
+        ],
+        "personal_information_collected": [
+            "Account"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Asks the user to enter a new password for an account, updating the saved credentials for the account. Normally this happens automatically when the server rejects credentials during an auth token fetch, but this can be invoked directly to ensure we have the correct credentials stored. ",
+        "related_api": "null"
     }
+
 }
