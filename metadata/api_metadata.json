@@ -1635,6 +1635,309 @@
         "method_called": "null",
         "api_description": "Asks the user to enter a new password for an account, updating the saved credentials for the account. Normally this happens automatically when the server rejects credentials during an auth token fetch, but this can be invoked directly to ensure we have the correct credentials stored. ",
         "related_api": "null"
+    },
+    "android.hardware.camera2.CameraDevice;close": {
+        "id": "android.hardware.camera2.CameraDevice;close",
+        "class_name": "android.hardware.camera2.CameraDevice",
+        "method_name": "close",
+        "permissions_required": [
+            "CAMERA"
+        ],
+        "personal_information_collected": [
+            "camera"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Close the connection to this camera device as quickly as possible.",
+        "related_api": "null"
+    },
+
+"android.hardware.camera2.CameraDevice;createCaptureRequest": {
+        "id": "android.hardware.camera2.CameraDevice;createCaptureRequest",
+        "class_name": "android.hardware.camera2.CameraDevice",
+        "method_name": "createCaptureRequest",
+        "permissions_required": [
+            "CAMERA"
+        ],
+        "personal_information_collected": [
+            "camera"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": " This methods allows clients to pass physical camera ids which can be used to customize the request for a specific physical camera. The settings are chosen to be the best options for the specific logical camera device. ",
+        "related_api": "null"
+    },
+
+"android.hardware.camera2.CameraDevice;createCaptureSession": {
+        "id": "android.hardware.camera2.CameraDevice;createCaptureSession",
+        "class_name": "android.hardware.camera2.CameraDevice",
+        "method_name": "createCaptureSession",
+        "permissions_required": [
+            "CAMERA"
+        ],
+        "personal_information_collected": [
+            "camera"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": " The active capture session determines the set of potential output Surfaces for the camera device for each capture request.",
+        "related_api": "null"
+    },
+
+    "android.hardware.camera2.CameraDevice;createCaptureSessionByOutputConfigurations": {
+        "id": "android.hardware.camera2.CameraDevice;createCaptureSessionByOutputConfigurations",
+        "class_name": "android.hardware.camera2.CameraDevice",
+        "method_name": "createCaptureSessionByOutputConfigurations",
+        "permissions_required": [
+            "CAMERA"
+        ],
+        "personal_information_collected": [
+            "camera"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Create a new camera capture session by providing the target output set of Surfaces and its corresponding surface configuration to the camera device.",
+        "related_api": "null"
+    },
+
+     "android.hardware.camera2.CameraDevice;createConstrainedHighSpeedCaptureSession": {
+        "id": "android.hardware.camera2.CameraDevice;createConstrainedHighSpeedCaptureSession",
+        "class_name": "android.hardware.camera2.CameraDevice",
+        "method_name": "createConstrainedHighSpeedCaptureSession",
+        "permissions_required": [
+            "CAMERA"
+        ],
+        "personal_information_collected": [
+            "camera"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Create a new constrained high speed capture session.",
+        "related_api": "null"
+    },
+    "android.hardware.camera2.CameraDevice;createReprocessCaptureRequest": {
+        "id": "android.hardware.camera2.CameraDevice;createReprocessCaptureRequest",
+        "class_name": "android.hardware.camera2.CameraDevice",
+        "method_name": "createReprocessCaptureRequest",
+        "permissions_required": [
+            "CAMERA"
+        ],
+        "personal_information_collected": [
+            "camera"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Create a CaptureRequest.Builder for a new reprocess CaptureRequest from a TotalCaptureResult.",
+        "related_api": "null"
+    },
+     "android.hardware.camera2.CameraDevice;createReprocessableCaptureSession": {
+        "id": "android.hardware.camera2.CameraDevice;createReprocessableCaptureSession",
+        "class_name": "android.hardware.camera2.CameraDevice",
+        "method_name": "createReprocessableCaptureSession",
+        "permissions_required": [
+            "CAMERA"
+        ],
+        "personal_information_collected": [
+            "camera"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Create a new reprocessable camera capture session by providing the desired reprocessing input Surface configuration and the target output set of Surfaces to the camera device.",
+        "related_api": "null"
+    },
+    "android.hardware.camera2.CameraDevice;isSessionConfigurationSupported": {
+        "id": "android.hardware.camera2.CameraDevice;isSessionConfigurationSupported",
+        "class_name": "android.hardware.camera2.CameraDevice",
+        "method_name": "isSessionConfigurationSupported",
+        "permissions_required": [
+            "CAMERA"
+        ],
+        "personal_information_collected": [
+            "camera"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "This method performs a runtime check of a given SessionConfiguration. The result confirms whether or not the passed session configuration can be successfully used to create a camera capture session using",
+        "related_api": "null"
+    },
+ "android.hardware.camera2.CameraDevice;createReprocessableCaptureSessionByConfigurations": {
+        "id": "android.hardware.camera2.CameraDevice;createReprocessableCaptureSessionByConfigurations",
+        "class_name": "android.hardware.camera2.CameraDevice",
+        "method_name": "createReprocessableCaptureSessionByConfigurations",
+        "permissions_required": [
+            "CAMERA"
+        ],
+        "personal_information_collected": [
+            "camera"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Create a new reprocessable camera capture session by providing the desired reprocessing input configuration and output OutputConfiguration to the camera device.",
+        "related_api": "null"
+    }, 
+
+    "android.hardware.camera2.CameraCharacteristics;getKeysNeedingPermission": {
+        "id": "android.hardware.camera2.CameraCharacteristics;getKeysNeedingPermission",
+        "class_name": "android.hardware.camera2.CameraCharacteristics",
+        "method_name": "getKeysNeedingPermission",
+        "permissions_required": [
+            "CAMERA"
+        ],
+        "personal_information_collected": [
+            "camera"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Returns a subset of the list returned by getKeys() with all keys that require camera clients to obtain the Manifest.permission.CAMERA permission.",
+        "related_api": "null"
+    }, 
+
+  "android.hardware.camera2.CameraManager;openCamera": {
+        "id": "android.hardware.camera2.CameraManager;openCamera",
+        "class_name": "android.hardware.camera2.CameraManager",
+        "method_name": "openCamera",
+        "permissions_required": [
+            "CAMERA"
+        ],
+        "personal_information_collected": [
+            "camera"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Open a connection to a camera with the given ID.",
+        "related_api": "null"
+    },
+
+    
+  "android.hardware.camera2.CaptureResult;getKeys": {
+        "id": "android.hardware.camera2.CaptureResult;getKeys",
+        "class_name": "android.hardware.camera2.CaptureResult",
+        "method_name": "getKeys",
+        "permissions_required": [
+            "CAMERA"
+        ],
+        "personal_information_collected": [
+            "camera"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Returns a list of the keys contained in this map.",
+        "related_api": "null"
+    },
+    "android.os.Environment;getExternalStorageDirectory ": {
+        "id": "android.os.Environment;getExternalStorageDirectory ",
+        "class_name": "android.os.Environment",
+        "method_name": "getExternalStorageDirectory ",
+        "permissions_required": [
+            "WRITE_EXTERNAL_STORAGE",
+            "READ_EXTERNAL_STORAGE"
+        ],
+        "personal_information_collected": [
+            "storage directory"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Return the primary shared/external storage directory.This directory may not currently be accessible if it has been mounted by the user on their computer, has been removed from the device, or some other problem has happened.",
+        "related_api": "null"
+    },
+    "android.os.Environment;getExternalCacheDirs": {
+        "id": "android.os.Environment;getExternalCacheDir ",
+        "class_name": "android.os.Environment",
+        "method_name": "getExternalCacheDir ",
+        "permissions_required": [
+            "WRITE_EXTERNAL_STORAGE",
+            "READ_EXTERNAL_STORAGE"
+        ],
+        "personal_information_collected": [
+            "second storage directory"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Access to secondary storage.",
+        "related_api": "null"
+    },
+
+    "android.os.Environment;getExternalFilesDir": {
+        "id": "android.os.Environment;getExternalFilesDir ",
+        "class_name": "android.os.Environment",
+        "method_name": "getExternalFilesDir ",
+        "permissions_required": [
+            "WRITE_EXTERNAL_STORAGE",
+            "READ_EXTERNAL_STORAGE"
+        ],
+        "personal_information_collected": [
+            "second storage directory"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Access to secondary storage.",
+        "related_api": "null"
+    },
+        "android.os.Environment;getExternalMediaDirs": {
+        "id": "android.os.Environment;getExternalMediaDirs ",
+        "class_name": "android.os.Environment",
+        "method_name": "getExternalMediaDirs ",
+        "permissions_required": [
+            "WRITE_EXTERNAL_STORAGE",
+            "READ_EXTERNAL_STORAGE"
+        ],
+        "personal_information_collected": [
+            "second storage directory"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Access to secondary storage.",
+        "related_api": "null"
+    },
+     "android.hardware.SensorManager;getDefaultSensor": {
+        "id": "android.hardware.SensorManager;getDefaultSensor ",
+        "class_name": "android.hardware.SensorManager",
+        "method_name": "getDefaultSensor ",
+        "permissions_required": [
+            "BODY_SENSORS",
+            "ACTIVITY_RECOGNITION"
+        ],
+        "personal_information_collected": [
+            "activity information"
+        ],
+        "api_level": "null",
+        "sdk_level": "null",
+        "is_android_api": "True",
+        "method_called": "null",
+        "api_description": "Use this method to get the default sensor for a given type or Return a Sensor with the given type and wakeUp properties.",
+        "related_api": "null"
     }
 
 }
