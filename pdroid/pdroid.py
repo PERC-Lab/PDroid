@@ -19,8 +19,8 @@ class APK():
         self._app_name = apk.get_app_name()
         self._permissions_in_xml = apk.get_permissions()
         self._api_methods = self._extract_api_methods(apk_analysis)
-        self._picu = self.get_picu()
-        self._api_callers = self._extract_callers(self._api_methods)
+        self._personal_information_used = self.get_piu()
+        self.prcs = self.get_prcs(self._api_methods)
 
     
     def get_permissions_in_xml(self):
@@ -53,7 +53,8 @@ class APK():
         return api_methods
 
     def _extract_callers(self, api_called):
-        """Returns a list of methods that call methods in `api_called`"""
+        """Returns a JSON object of callers. The key is the caller's `id` and the value is another JSON object
+        defined as {'caller': caller, apis_called = [api_1, api_2, ... api_n]}"""
         callers = {} 
 
         for each_meth in api_called:
@@ -66,15 +67,41 @@ class APK():
                     callers[caller.get_id()] = {'caller': caller, 'apis_called': [each_meth]}
         return callers
 
-    def get_picu(self):
-        """Return list of personal information collected/used (picu) by all methods"""
-        picu = []
+    def get_piu(self):
+        """Return list of personal information used (piu) by all methods"""
+        piu = []
 
         for each_api_method in self._api_methods:
-            picu.extend(each_api_method.get_personal_information_collected())
+            piu.extend(each_api_method.get_personal_information_collected())
 
-        return list(set(picu))
+        return list(set(piu))
     
+    def get_prcs(self, api_methods):
+        """Returns a list of tuples representing permission-requiring code segments (PRCS). 
+        PRCS is defined as a code segment that calls permission-requiring Android API
+        to process personal information. Currently, PRCS includes upto 3 hops of methods.
+        """
+        prcs_list = []
+
+        first_hop_dict = self._extract_callers(api_methods)
+        first_hop_list = [f['caller'] for f in first_hop_dict.values()]
+
+        # 
+        for each_first_hop in first_hop_list:
+            second_hop_list = each_first_hop.get_caller_methods()
+            if len(second_hop_list) == 0:
+                prcs_list.append((each_first_hop))
+            else:
+                for each_second_hop in second_hop_list:
+                    third_hop_list = each_second_hop.get_caller_methods()
+                    if len(third_hop_list) == 0:
+                        prcs_list.append((each_first_hop, each_second_hop))
+                    else:
+                        for each_third_hop in third_hop_list:
+                            prcs_list.append((each_first_hop, each_second_hop, each_third_hop))
+
+        return prcs_list
+
     def export(self):
         attribute_dictionary = dict([
             ("app_id", str(self.get_package_name())),
@@ -225,4 +252,4 @@ class PrivacyMethod(AbstractPrivacyMethod):
         return f"{self.get_id()}"
     
     def __repr__(self):
-        return f"<pdroid.APK.PrivacyCode {self.__str__()}>"
+        return f"<pdroid.APK.PrivacyMethod {self.__str__()}>"
