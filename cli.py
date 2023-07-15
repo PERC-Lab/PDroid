@@ -14,7 +14,9 @@ logger = logging.getLogger(__name__)
 
 
 @click.command()
-@click.option('--apk', type=click.Path(exists=True), required=True, help='Path to the apk file')
+@click.option(
+    "--apk", type=click.Path(exists=True), required=True, help="Path to the apk file"
+)
 def extract_prcs(apk):
     """Analyzes the apk and extracts permission-requiring code segments"""
 
@@ -32,21 +34,26 @@ def extract_prcs(apk):
     for i, el in enumerate(prcs_list):
         filepath = app_dir / f"PRCS_{str(i)}.java"
 
-        with open(filepath, 'w') as f:
-            header =  f"class PRCS_{str(i)} {{\n"
+        with open(filepath, "w") as f:
+            header = f"/*Application Package Name: {a.get_package()}\nclass PRCS_{str(i)} {{\n"
             footer = "\n}"
             try:
                 f.write(header)
                 if type(el) == tuple:
                     for each_hop in el:
                         src_code = each_hop.get_source_code()
-                        f.write(src_code)
+                        javadoc_comment = each_hop.get_id()
+                        code = f"/**\n{javadoc_comment}\n*/\n{src_code}\n"
+                        f.write(code)
                 else:
                     src_code = el.get_source_code()
-                    f.write(src_code)
+                    javadoc_comment = el.get_id()
+                    code = f"/**\n{javadoc_comment}\n*/\n{src_code}\n"
+                    f.write(code)
                 f.write(footer)
             except Exception as e:
                 print(f"Exception {e} occurred at index {i}")
+
 
 if __name__ == "__main__":
     extract_prcs()

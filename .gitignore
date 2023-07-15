@@ -135,3 +135,4 @@ dmypy.json
 logfile.txt
 pdroid/*.txt
 foo.py
+temp/*
