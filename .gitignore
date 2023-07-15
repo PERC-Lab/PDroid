@@ -134,5 +134,5 @@ dmypy.json
 *.ipynb
 logfile.txt
 pdroid/*.txt
-foo.py
+*foo*
 temp/*
