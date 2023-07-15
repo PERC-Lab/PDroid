@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "pdroid"
+version = "0.3.0"
+description = "A Python-based CLI app to analyze privacy behaviors of an Android app at source code level"
+authors = ["Vijayanta Jain <vijayantajain@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
