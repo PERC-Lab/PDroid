@@ -1,12 +1,14 @@
 [tool.poetry]
 name = "pdroid"
 version = "0.3.0"
-description = "A Python-based CLI app to analyze privacy behaviors of an Android app at source code level"
+description = "A python based tool to analyze privacy behaviors of Android app at source code"
 authors = ["Vijayanta Jain <vijayantajain@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.8"
+androguard = "3.4.0a1"
+six = "1.16.0"
 
 
 [build-system]
