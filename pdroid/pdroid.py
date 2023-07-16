@@ -16,21 +16,12 @@ METADATA = path.join(METADATA_DIR, "api_metadata.json")
 
 class APK:
     def __init__(self, apk, apk_analysis):
-        self._package_name = apk.get_package()
-        self._app_name = apk.get_app_name()
-        self._permissions_in_xml = apk.get_permissions()
+        self.package_name = apk.get_package()
+        self.app_name = apk.get_app_name()
+        self.permissions_in_xml = apk.get_permissions()
         self._api_methods = self._extract_api_methods(apk_analysis)
-        self._personal_information_used = self.get_piu()
-        self.prcs = self.get_prcs(self._api_methods)
-
-    def get_permissions_in_xml(self):
-        return self._permissions_in_xml
-
-    def get_package_name(self):
-        return self._package_name
-
-    def get_app_name(self):
-        return self._app_name
+        self.personal_information_used = self._get_piu()
+        self.prcs = self._get_prcs(self._api_methods)
 
     def _get_method_id(self, x):
         method_strings = x.split("->")
@@ -80,7 +71,7 @@ class APK:
                     }
         return callers
 
-    def get_piu(self):
+    def _get_piu(self):
         """Return list of personal information used (piu) by all methods"""
         piu = []
 
@@ -89,7 +80,7 @@ class APK:
 
         return list(set(piu))
 
-    def get_prcs(self, api_methods):
+    def _get_prcs(self, api_methods):
         """Returns a list of tuples representing
         permission-requiring code segments (PRCS).
         PRCS is defined as a code segment that calls
@@ -123,10 +114,10 @@ class APK:
     def export(self):
         attribute_dictionary = dict(
             [
-                ("app_id", str(self.get_package_name())),
-                ("title", str(self.get_app_name())),
-                ("permissions_in_xml", [str(x) for x in self.get_permissions_in_xml()]),
-                ("personal_information_processed", self.get_picu()),
+                ("app_id", str(self.package_name)),
+                ("title", str(self.app_name)),
+                ("permissions_in_xml", [str(x) for x in self.permissions_in_xml]),
+                ("personal_information_processed", self.personal_information_used),
             ]
         )
 
