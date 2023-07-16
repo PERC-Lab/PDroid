@@ -5,8 +5,6 @@ import re
 import os
 from os import path
 
-from androguard.misc import AnalyzeAPK
-
 from androguard.core.mutf8 import MUTF8String
 
 CWD = os.getcwd()
@@ -145,7 +143,7 @@ class AbstractPrivacyMethod:
         remove '$<int>' instances"""
         refined_method_name = str(method_name).replace("/", ".")[1:]
         # print(f"Type of str = {type(refined_method_name)}")
-        regex_match = re.search("\$.*;", refined_method_name)
+        regex_match = re.search(r"\$.*;", refined_method_name)
 
         if regex_match is not None:
             start, end = regex_match.span()
