@@ -53,7 +53,7 @@ ptyprocess==0.6.0
 pycodestyle==2.6.0
 pydot==1.4.1
 pyflakes==2.2.0
-Pygments==2.7.4
+Pygments==2.15.0
 pylint==2.4.3
 pyparsing==2.4.2
 pyperclip==1.7.0
